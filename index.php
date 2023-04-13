@@ -10,7 +10,5 @@
         </h1>
     <?php
     } ?>
-
-
 </body>
 <?php get_footer(); ?>
