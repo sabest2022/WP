@@ -1,8 +1,6 @@
 <?php
-get_header()
+get_header();
 ?>
-
-
 
 <main>
     <section>
@@ -10,9 +8,14 @@ get_header()
             <div class="row">
                 <div class="col-xs-12">
                     <div class="hero">
-                        <img src="<?php the_post_thumbnail_url() ?>" />
+                        <img src="wp-content/themes/inlamning1-wp/assets/images/city.jpg" />
                         <div class="text">
-                            <?php the_content(); ?>
+                            <?php
+                            if (have_posts()) {
+                                the_post();
+                                the_content();
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -20,7 +23,6 @@ get_header()
         </div>
     </section>
 </main>
-
 
 <?php
 get_footer();
