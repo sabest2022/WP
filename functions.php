@@ -28,7 +28,7 @@ function menue()
 {
     $menues = array(
         "headermenue" => "headermenue",
-        "sidemenue" => "Side Menue"
+        "sidemenue" => "sidemenue"
     );
     register_nav_menus($menues);
 }
