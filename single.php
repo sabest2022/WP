@@ -27,6 +27,7 @@
                                     </li>
                                 </ul>
                                 <p> <?php the_content(); ?></p>
+                                <div><?php comments_template(); ?></div>
 
                             </article>
                         <?php endwhile; ?>
