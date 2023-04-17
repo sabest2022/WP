@@ -6,7 +6,7 @@ add_theme_support('widgets');
 function sheets()
 {
     wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array());
-    wp_register_style('front', get_template_directory_uri() . '/assets/css/front-awesome.css', array());
+    wp_register_style('front', get_template_directory_uri() . '/assets/css/font-awesome.css', array());
     wp_register_style('style', get_template_directory_uri() . '/assets/css/style.css', array());
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('front');

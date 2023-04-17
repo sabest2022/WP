@@ -32,16 +32,9 @@
                     <?php else : ?>
                         <p> Inga post hittades</p>
                     <?php endif; ?>
-                    <nav class="navigation pagination">
-                        <?php echo paginate_links(); ?>
-                        <?php
 
-                        echo paginate_links(array(
-                            'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-                            'format' => '?paged=%#%',
-                            'current' => max(1, get_query_var('paged')),
-                            'total' => $wp_query->max_num_pages
-                        )); ?>
+                    <nav class="navigation pagination">
+                        <?php echo paginate_links(); ?> <!-- Fetching pagenate links if they are needed -->
                     </nav>
 
                 </div>
