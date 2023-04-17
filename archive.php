@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-ytdhthd
+
 <main>
     <section>
         <div class="container">
@@ -21,7 +21,8 @@ ytdhthd
                                         <i class="fa fa-user"></i> <?php the_author_posts_link(); ?>
                                     </li>
                                     <li>
-                                        <i class="fa fa-tag"></i><a href="<?php the_permalink(); ?>"><?php the_category(); ?></a>
+                                        <i class="fa fa-tag"></i><a href="<?php the_permalink(); ?>"><?php the_category(', '); ?></a>
+
                                     </li>
                                 </ul>
                                 <p> <?php the_content(); ?></p>
@@ -31,6 +32,9 @@ ytdhthd
                     <?php else : ?>
                         <p> Inga post hittades</p>
                     <?php endif; ?>
+                    <nav class="navigation pagination">
+                        <?php echo paginate_links(); ?> <!-- Fetching pagenate links if they are needed -->
+                    </nav>
                 </div>
                 <?php get_sidebar(); ?>
             </div>
