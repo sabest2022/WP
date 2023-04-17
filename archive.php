@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <main>
-
     <section>
         <div class="container">
             <div class="row">
@@ -22,7 +21,7 @@
                                         <i class="fa fa-user"></i> <?php the_author_posts_link(); ?>
                                     </li>
                                     <li>
-                                        <i class="fa fa-tag"></i><a href="<?php the_permalink(); ?>"><?php the_category(", "); ?></a>
+                                        <i class="fa fa-tag"></i><a href="<?php the_permalink(); ?>"><?php the_category(); ?></a>
                                     </li>
                                 </ul>
                                 <p> <?php the_content(); ?></p>
