@@ -33,3 +33,85 @@ function menue()
     register_nav_menus($menues);
 }
 add_action('init', 'menue');
+
+
+
+function o_widget_area()
+{
+    // widgets för footer
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'footer area1',
+            'id' => 'footer-1',
+            'description' => 'footer widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'footer area2',
+            'id' => 'footer-2',
+            'description' => 'footer widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'footer area3',
+            'id' => 'footer-3',
+            'description' => 'footer widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'footer area4',
+            'id' => 'footer-4',
+            'description' => 'footer widget area'
+        )
+    );
+    // widgets för aside
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'aside area1',
+            'id' => 'aside-1',
+            'description' => 'aside widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'aside area2',
+            'id' => 'aside-2',
+            'description' => 'aside widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'aside area3',
+            'id' => 'aside-3',
+            'description' => 'aside widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_widget'  => '<div>',
+            'after_widget'   => "</div>",
+            'name' => 'kontakt form',
+            'id' => 'kontakt',
+            'description' => 'kontakt widget area'
+        )
+    );
+}
+
+add_action('widgets_init', 'o_widget_area');
